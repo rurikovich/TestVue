@@ -6,7 +6,8 @@ function initVue() {
     new Vue({
         el: '#speechScript',
         data: {
-            questions:''
+            questions: '',
+            currentQuestion: 0
         },
         created: function () {
             this.fetchData()
