@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+    <script type="application/javascript" src="libs/vue.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container theme-showcase" id="speechScript">
+    <div class="text-center jumbotron" v-for="q in questions">
+        <h2> {{ q.question }}</h2>
+        <button type="button" class="btn btn-lg btn-default margin" v-for="answer in q.answers">
+            {{ answer.text }}
+        </button>
+    </div>
+
+</div>
+
+<script type="application/javascript" src="js/vues.js"></script>
+</body>
+</html>
+
+
