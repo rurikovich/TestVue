@@ -3,30 +3,35 @@
  */
 
 function initVue() {
-    new Vue({
-        el: '#speechScript',
-        data: {
-            questions: '',
-            currentQuestion: 0
-        },
-        created: function () {
-            this.fetchData()
-        },
 
-        methods: {
-            fetchData: function () {
-                var xhr = new XMLHttpRequest()
-                var self = this
-                xhr.open('GET', '/json')
-                xhr.onload = function () {
-                    self.questions = JSON.parse(xhr.responseText)
-                    console.log(self.questions[0])
-                }
-                xhr.send()
-            }
-        }
-
-    })
 }
 
 initVue()
+
+
+var vm = new Vue({
+    el: '#speechScript',
+    data: {
+        questions: '',
+        currentQuestion: 0,
+        prevQuestions: []
+
+    },
+    created: function () {
+        var xhr = new XMLHttpRequest()
+        var self = this
+        xhr.open('GET', '/json')
+        xhr.onload = function () {
+            self.questions = JSON.parse(xhr.responseText)
+            console.log(self.questions[0])
+        }
+        xhr.send()
+    },
+
+    methods: {
+        switchQuestion: function (nextQuestionId) {
+            this.prevQuestions.push(this.currentQuestion)
+            this.currentQuestion = nextQuestionId
+        }
+    }
+})

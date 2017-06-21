@@ -10,16 +10,16 @@
 </head>
 <body>
 <div class="container theme-showcase" id="speechScript">
-    <!--<div v-for="q in  questions">-->
-        <!--&lt;!&ndash;<div class="text-center jumbotron" v-if="q.id<currentQuestion">&ndash;&gt;-->
-            <!--<h3 > {{q.question}}</h3>-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--</div>-->
+    <div v-for="index in  prevQuestions">
+        <div class="text-center jumbotron">
+            <h3 > {{questions[index].question}}</h3>
+        </div>
+    </div>
 
 
     <div class="text-center jumbotron">
         <h2> {{ questions[currentQuestion].question }}</h2>
-        <button type="button" class="btn btn-lg btn-default margin" v-on:click="currentQuestion = answer.qId"
+        <button type="button" class="btn btn-lg btn-default margin" v-on:click="switchQuestion(answer.qId)"
                 v-for="answer in  questions[currentQuestion].answers">
             {{ answer.text }}
         </button>
