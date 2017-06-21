@@ -29,8 +29,12 @@ var vm = new Vue({
     },
 
     methods: {
-        switchQuestion: function (nextQuestionId) {
-            this.prevQuestions.push(this.currentQuestion)
+        switchQuestion: function (nextQuestionId,answerId) {
+            var pq={}
+            pq.qId=this.currentQuestion
+            pq.aId=answerId
+
+            this.prevQuestions.push(pq)
             this.currentQuestion = nextQuestionId
         }
     }
