@@ -1,15 +1,34 @@
 [
   {
     "id": "0",
-    "question": "Будете брать кредит? он очень выгоден. Берите Халву",
+    "question": "Будете брать кредит? Он очень выгоден.",
     "answers": [
       {
         "qId": 1,
-        "text": "да"
+        "title": "да",
+        "dataToInput": [
+          {
+            "type": "text",
+            "value": ""
+          },
+          {
+            "type": "datetime",
+            "value": ""
+          },
+          {
+            "type": "location",
+            "value": ""
+          },
+          {
+            "type": "fixedchoice",
+            "value": ""
+          }
+        ]
       },
       {
         "qId": 2,
-        "text": "нет"
+        "title": "нет",
+        "dataToInput": []
       }
     ]
   },
@@ -19,11 +38,22 @@
     "answers": [
       {
         "qId": 4,
-        "text": "1000р"
+        "title": "1000р",
+        "dataToInput": [
+          {
+            "type": "text",
+            "value": ""
+          },
+          {
+            "type": "datetime",
+            "value": ""
+          }
+        ]
       },
       {
         "qId": -1,
-        "text": "100 000?"
+        "title": "100 000?",
+        "dataToInput": []
       }
     ]
   },
@@ -33,41 +63,50 @@
     "answers": [
       {
         "qId": 3,
-        "text": "не хочу"
+        "title": "не хочу",
+        "dataToInput": [
+          {
+            "type": "text",
+            "value": ""
+          }
+        ]
       },
       {
         "qId": -1,
-        "text": "не буду"
+        "title": "не буду",
+        "dataToInput": []
       }
     ]
-  }
-,
+  },
   {
     "id": "3",
     "question": "Ну пожалуйста?",
     "answers": [
       {
         "qId": -1,
-        "text": "все равно нет!"
+        "title": "все равно нет!",
+        "dataToInput": []
       },
       {
         "qId": -1,
-        "text": "Не звоните мне больше!!"
+        "title": "Не звоните мне больше!!",
+        "dataToInput": []
       }
     ]
-  }
-,
+  },
   {
     "id": "4",
     "question": "А что так мало ??",
     "answers": [
       {
         "qId": -1,
-        "text": "ну вот так"
+        "title": "ну вот так",
+        "dataToInput": []
       },
       {
         "qId": -1,
-        "text": "больше не даем"
+        "title": "больше не даем",
+        "dataToInput": []
       }
     ]
   }

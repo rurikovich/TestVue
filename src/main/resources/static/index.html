@@ -14,7 +14,7 @@
         <div class="text-center jumbotron">
             <h3>Вопрос: {{questions[pq.qId].question}}</h3>
 
-            <h3>Ответ: {{questions[pq.qId].answers[pq.aId].text}}</h3>
+            <h3>Ответ: {{questions[pq.qId].answers[pq.aId].title}}</h3>
         </div>
     </div>
 
@@ -22,7 +22,10 @@
         <h2> {{ questions[currentQuestion].question }}</h2>
         <button type="button" class="btn btn-lg btn-default margin" v-on:click="switchQuestion(answer.qId,index)"
                 v-for="(answer,index) in  questions[currentQuestion].answers">
-            {{ answer.text }}
+            {{ answer.title }}
+            <template v-for="fc in fieldComponents">
+                <component  v-bind:is="fc"></component>
+            </template>
         </button>
     </div>
 
